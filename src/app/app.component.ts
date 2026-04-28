@@ -22,6 +22,6 @@ export class AppComponent {
 
   onSelect(user: Usuario): void {
     this.selectedUser = user;
-    // console.log('Usuario seleccionado:', user.name); // Para que verifiques en consola
+    console.log('Usuario seleccionado:', user.name); // Para que verifiques en consola
   }
 }

@@ -9,12 +9,12 @@
 
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <section class="lg:col-span-2 space-y-4">
-      <!-- <app-usuario-list (userSelected)="onSelect($event)"></app-usuario-list> -->
+      <app-usuario-list (userSelected)="onSelect($event)"></app-usuario-list>
     </section>
 
     <aside class="lg:col-span-1">
       <div class="sticky top-8 animate-fade-in" *ngIf="selectedUser">
-        <!-- <app-usuario-detail [usuario]="selectedUser"></app-usuario-detail> -->
+        <app-usuario-detail [usuario]="selectedUser"></app-usuario-detail>
       </div>
       <div *ngIf="!selectedUser" class="glass-card p-10 text-center border-dashed border-2 border-[var(--text-dim)]/20">
          <p class="text-[var(--text-dim)] font-display uppercase tracking-widest text-xs">Select a developer to view profile</p>

@@ -1,1 +1,28 @@
-<p>usuario-list works!</p>
+<div class="space-y-4">
+  <div *ngFor="let u of usuarios" (click)="onSelect(u)"
+    class="p-5 rounded-xl border border-[var(--text-dim)]/20 bg-[var(--surface-1)] hover:bg-[var(--surface-2)] transition-all cursor-pointer group relative overflow-hidden">
+
+    <div class="flex items-center">
+      <img [src]="u.avatarUrl" class="w-12 h-12 rounded-full border border-[var(--gold)]/30 mr-4">
+
+      <div class="flex-1">
+        <div class="flex items-center gap-2">
+          <span class="font-bold text-[var(--text-primary)] text-lg">{{ u.name }}</span>
+          <span class="text-xs text-[var(--text-dim)] font-mono">{{ u.username }}</span>
+        </div>
+
+        <div class="flex items-center gap-3 mt-1">
+          <span
+            class="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-[var(--accent-red)]/20 text-[var(--accent-soft)]">
+            {{ u.role }}
+          </span>
+          <span class="text-xs text-[var(--text-muted)] flex items-center">
+            <span class="material-symbols-outlined text-xs mr-1">location_on</span> {{ u.location }}
+          </span>
+        </div>
+      </div>
+
+      <span class="material-symbols-outlined text-[var(--text-dim)] group-hover:text-[var(--gold)]">chevron_right</span>
+    </div>
+  </div>
+</div>

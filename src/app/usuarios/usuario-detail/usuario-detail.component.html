@@ -1,1 +1,30 @@
-<p>usuario-detail works!</p>
+<div *ngIf="usuario" class="glass-card p-8 animate-fade-in sticky top-8">
+  <div class="flex flex-col items-center text-center pb-6 border-b border-[var(--text-dim)]/10">
+    <img [src]="usuario.avatarUrl"
+      class="w-24 h-24 rounded-full border-2 border-[var(--gold)] object-cover mb-4 shadow-[0_0_20px_rgba(191,150,88,0.2)]">
+    <h2 class="font-display text-2xl font-bold text-[var(--text-primary)] mb-1">{{ usuario.name }}</h2>
+    <span class="text-sm text-[var(--text-dim)] bg-[var(--surface-2)] px-3 py-1 rounded-full mb-3">{{ usuario.username
+      }}</span>
+    <span class="badge-premium border-[var(--gold)]/30 text-[var(--gold)]">{{ usuario.role }}</span>
+  </div>
+
+  <div class="py-6 space-y-4">
+    <div class="flex items-center text-[var(--text-muted)] text-sm">
+      <span class="material-symbols-outlined mr-3 text-[var(--gold)]">location_on</span> {{ usuario.location }}
+    </div>
+    <div class="flex items-center text-[var(--text-muted)] text-sm">
+      <span class="material-symbols-outlined mr-3 text-[var(--gold)]">mail</span> {{ usuario.email }}
+    </div>
+  </div>
+
+  <div class="pt-6">
+    <h3 class="font-display text-sm font-bold text-[var(--text-primary)] uppercase tracking-widest mb-4">Repositorios
+      Asignados</h3>
+    <div class="grid grid-cols-4 gap-2">
+      <div *ngFor="let id of usuario.repoIds"
+        class="text-center py-2 rounded bg-[var(--surface-2)] border border-[var(--text-dim)]/10 text-[var(--gold)] text-xs font-bold">
+        #{{ id }}
+      </div>
+    </div>
+  </div>
+</div>
