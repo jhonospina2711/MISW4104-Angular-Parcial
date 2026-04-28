@@ -2,12 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>MISW4104AngularParcial</title>
+  <title>MISW4104 Parcial</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            surface0: '#0b0b0f',
+            surface1: '#111117',
+            gold: '#bf9658',
+            accentRed: '#922532',
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
+<body class="bg-surface0 text-white">
   <app-root></app-root>
 </body>
 </html>
