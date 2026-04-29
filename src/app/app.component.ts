@@ -18,10 +18,13 @@ export class AppComponent {
   title = 'MISW4104-Angular-Parcial';
 
   selectedUser: Usuario | undefined;
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   onSelect(user: Usuario): void {
     this.selectedUser = user;
+    if (window.innerWidth < 1024) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
     this.router.navigate(['/']);
   }
 }
