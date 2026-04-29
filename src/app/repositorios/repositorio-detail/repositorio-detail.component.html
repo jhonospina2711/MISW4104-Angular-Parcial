@@ -1,1 +1,18 @@
-<p>repositorio-detail works!</p>
+<div class="main-container animate-fade-in" *ngIf="repo">
+  <button (click)="cerrar()" class="flex items-center text-[var(--gold)] mb-4 hover:underline text-xs">
+    <span class="material-symbols-outlined text-sm mr-1">close</span>
+    Cerrar detalle del repositorio
+  </button>
+
+  <div class="glass-card p-10 max-w-2xl mx-auto">
+    <h1 class="text-4xl font-bold text-[var(--text-primary)] mb-2">{{ repo.name }}</h1>
+    <p class="text-[var(--gold)] font-mono mb-6">Repository ID: {{ repo.id }}</p>
+
+    <div class="bg-black/20 p-6 rounded-lg border border-white/5">
+      <h3 class="text-xs uppercase tracking-widest text-[var(--text-dim)] mb-2">Descripción</h3>
+      <p class="text-[var(--text-muted)] leading-relaxed">
+        {{ repo.description || 'Sin descripción disponible.' }}
+      </p>
+    </div>
+  </div>
+</div>

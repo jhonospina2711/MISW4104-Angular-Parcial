@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UsuarioListComponent } from './usuario-list/usuario-list.component';
 import { UsuarioDetailComponent } from './usuario-detail/usuario-detail.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -11,9 +12,10 @@ import { UsuarioDetailComponent } from './usuario-detail/usuario-detail.componen
     UsuarioDetailComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
-  exports: [ // ¡ESTO ES VITAL!
+  exports: [
     UsuarioListComponent,
     UsuarioDetailComponent
   ]
